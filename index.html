@@ -4,11 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Akarsh</title>
+    <title>Audio samples from "Stress Detection and Transfer in Speech-to-Speech Machine Translation"</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        img {
+            display: block;
+            margin-bottom: 15px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
     <body>
-        <p>Hello World</p>
+        <h1>Audio samples from "Stress Detection and Transfer in Speech-to-Speech Machine Translation"</h1>
+        <p><b>Abstract:</b> The language diversity in India's education sector poses a significant challenge, hindering inclusivity. Despite the democratization of knowledge through online educational content, the dominance of English, as the internet's lingua franca, limits accessibility, emphasizing the crucial need for translation into Indian languages. Despite existing Speech to Speech Machine Translation (SSMT) technologies, the lack of intonation often leads to monotonous translations, leading to a loss of audience interest and disengagement from the content. To address this, our paper introduces a comprehensive dataset with stress annotations in Indian English for training a stress detection model and proposes a novel Text-to-Speech (TTS) architecture capable of incorporating stress into synthesized speech. The TTS architecture is based on FastPitch and can modify the variances based on stressed words given. We present an Indian English-to-Hindi SSMT system incorporating the proposed changes and aim to enhance the overall quality and engagement of educational content.
+        
+        <h2>For Indian English to Hindi Speech-to-Speech Machine Translation System</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English Speech</th>
+                    <th>English Text (ASR)</th>
+                    <th>English Stressed Words (Stress Detection Model)</th>
+                    <th>Hindi Text (MT)</th>
+                    <th>Hindi Stressed Words (MT Word Aligner)</th>
+                    <th>Hindi Speech without Stress (Neutral TTS)</th>
+                    <th>Hindi Speech with Stress (Proposed TTS with only Pitch variance)</th>
+                    <th>Hindi Speech with Stress (Proposed TTS with Pitch and Energy variance)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- iiith_ied_stress_01052 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_01052\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>In addition as we said in the previous class that machine learning or deep learning</td>
+                    <td>In <b><u>addition</u></b> as we said in the previous class that machine learning or deep learning</td>
+                    <td>इसके अलावा जैसा कि हमने पिछली कक्षा में कहा था कि मशीन लर्निंग या डीप लर्निंग</td>
+                    <td>इसके <b><u>अलावा</u></b> जैसा कि हमने पिछली कक्षा में कहा था कि मशीन लर्निंग या डीप लर्निंग</td>
+                    <td><audio src="demo_data\iiith_ied_stress_01052\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_01052\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_01052\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+                <!-- iiith_ied_stress_02342 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_02342\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>Now, before we go into detail of fire safety.</td>
+                    <td><b><u>Now, before</u></b> we go into detail of fire safety.</td>
+                    <td>अब, इससे पहले कि हम अग्नि सुरक्षा के बारे में विस्तार से जानें।</td>
+                    <td><b><u>अब, इससे पहले</u></b> कि हम अग्नि सुरक्षा के बारे में विस्तार से जानें।</td>
+                    <td><audio src="demo_data\iiith_ied_stress_02342\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02342\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02342\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+                <!-- iiith_ied_stress_02850 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_02850\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>telling how Chaucer came to write a set of accounts of women who were faithful in love even unto death.</td>
+                    <td>telling how Chaucer came to write a set of accounts of <b><u>women</u></b> who were faithful in love even unto death.</td>
+                    <td>यह बताते हुए कि कैसे चौसर ने उन महिलाओं के वृत्तांतों का एक सेट लिखा जो मृत्यु तक भी प्रेम में वफादार थीं।</td>
+                    <td>यह बताते हुए कि कैसे चौसर ने उन <b><u>महिलाओं</u></b> के वृत्तांतों का एक सेट लिखा जो मृत्यु तक भी प्रेम में वफादार थीं।</td>
+                    <td><audio src="demo_data\iiith_ied_stress_02850\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02850\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02850\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+                <!-- iiith_ied_stress_02915 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_02915\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>How to cope up with the changes that are happening in the field of technology?</td>
+                    <td><b><u>How to</u></b> cope up with the changes that are happening in the field of technology?</td>
+                    <td>टेक्नोलॉजी के क्षेत्र में हो रहे बदलावों से कैसे निपटें?</td>
+                    <td>टेक्नोलॉजी के क्षेत्र में हो रहे बदलावों से <b><u>कैसे</u></b> निपटें?</td>
+                    <td><audio src="demo_data\iiith_ied_stress_02915\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02915\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_02915\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+                <!-- iiith_ied_stress_03231 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_03231\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>Yet, the DNA which is found in humans is slightly different from the DNA which you find in earlier organisms</td>
+                    <td><b><u>Yet,</u></b> the DNA which is found in humans is slightly different from the DNA which you find in earlier organisms</td>
+                    <td>फिर भी, मनुष्यों में जो डीएनए पाया जाता है वह पहले के जीवों में पाए जाने वाले डीएनए से थोड़ा अलग होता है</td>
+                    <td><b><u>फिर भी</u></b>, मनुष्यों में जो डीएनए पाया जाता है वह पहले के जीवों में पाए जाने वाले डीएनए से थोड़ा अलग होता है</td>
+                    <td><audio src="demo_data\iiith_ied_stress_03231\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_03231\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_03231\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+                <!-- iiith_ied_stress_03327 -->
+                <tr>
+                    <td><audio src="demo_data\iiith_ied_stress_03327\original.wav" controls style="width: 200px;"></audio></td>
+                    <td>Now, this replacement of anthropocentrism or human-centered outlooks</td>
+                    <td><b><u>Now, this</u></b> replacement of anthropocentrism or human-centered outlooks</td>
+                    <td>अब, यह मानव-केन्द्रित दृष्टिकोण या मानव-केन्द्रित दृष्टिकोण का प्रतिस्थापन है</td>
+                    <td><b><u>अब, यह</u></b> मानव-केन्द्रित दृष्टिकोण या मानव-केन्द्रित दृष्टिकोण का प्रतिस्थापन है</td>
+                    <td><audio src="demo_data\iiith_ied_stress_03327\neutral.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_03327\modified_p.wav" controls style="width: 200px;"></audio></td>
+                    <td><audio src="demo_data\iiith_ied_stress_03327\modified.wav" controls style="width: 200px;"></audio></td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
